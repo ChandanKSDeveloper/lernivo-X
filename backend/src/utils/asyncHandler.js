@@ -20,7 +20,7 @@
 
 const asyncHandler = (anyPassedFunction) => (req, res, next) => {
     Promise
-        .resolve(anyPassedFunction(req, res))
+        .resolve(anyPassedFunction(req, res, next))
         .catch(next);
 }
 

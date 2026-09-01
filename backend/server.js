@@ -1,10 +1,9 @@
-import express from "express";
+import app from "./src/app.js";
 import connectDatabase from "./src/config/databaseConnection.js";
 import dotenv from "dotenv";
 
-dotenv.config();
 
-const app = express();
+dotenv.config();
 
 const PORT = process.env.PORT || 3000;
 const environment = process.env.NODE_ENV;

@@ -17,10 +17,11 @@
  */
 
 class ErrorHandler extends Error {
-  constructor(statusCode, message) {
+  constructor(statusCode, message, errors = null) {
     super(message);
     this.statusCode = statusCode;
     this.timestamp = new Date().toISOString();
+    this.errors = errors;
     Error.captureStackTrace(this, this.constructor);
   }
 }
